@@ -1,0 +1,15 @@
+<div class="container-fluid">
+	<form class="form-horizontal" role="form" action="/main/md5utils">
+		<div class="form-group form-group-lg">
+			<div class="col-sm-10">
+			<input type="text" name="md5str" class="form-control" placeholder="请输入您要加密的字符串" value="<%= @md5str %>">
+			</div>
+			<button type="submit" class="btn btn-primary btn-lg">加 密</button>
+		</div>
+	</form>
+
+	<p class="bg-success">16位小写:<span class="md5-result"></span></p>
+	<p class="bg-info uppercase">16位大写:<span class="md5-result"></span></p>
+	<p class="bg-warning">32位小写:<span class="md5-result"><%= @thirtyTwo %></span></p>
+	<p class="bg-danger uppercase">32位大写:<span class="md5-result"><%= @thirtyTwo %></span></p>
+</div>
