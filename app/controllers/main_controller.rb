@@ -2,13 +2,19 @@ class MainController < ApplicationController
   def index
   end
 
-  def md5utils
+  def encryption
   	require 'digest/md5'
-  	@md5str = params[:md5str]
-  	if @md5str.nil?
+  	@str = params[:str]
+  	if @str.nil?
+      @sixteen = nil
   		@thirtyTwo = nil
+      @sha1 = nil
+      @sha2 = nil
   		return
   	end
-  	@thirtyTwo = Digest::MD5.hexdigest(@md5str.to_s)
+    @sixteen = nil
+  	@thirtyTwo = Digest::MD5.hexdigest(@str.to_s)
+    @sha1 = Digest::SHA1.hexdigest(@str.to_s)
+    @sha2 = Digest::SHA2.hexdigest(@str.to_s)
   end
 end

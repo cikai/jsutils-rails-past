@@ -1,0 +1,41 @@
+<div class="container-fluid">
+	<div class="encryption-form">
+		<form class="form-inline" role="form" action="/main/encryption">
+			<div class="form-group form-group-lg">
+				<input type="text" name="str" class="form-control" placeholder="请输入您要加密的字符串" value="<%= @str %>">
+			</div>
+			<button type="submit" class="form-control btn btn-primary btn-lg" style="height: 46px;">加 密</button>
+		</form>
+	</div>
+
+	<hr />
+
+	<div class="select-label">
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li role="presentation" class="showMD5 active"><a href="javascript:showMD5();"><b>MD5加密</b></a></li>
+      <li role="presentation" class="showSHA1"><a href="javascript:showSHA1();"><b>SHA1加密</b></a></li>
+      <li role="presentation" class="showSHA2"><a href="javascript:showSHA2();"><b>SHA2加密</b></a></li>
+    </ul>
+  </div>
+	
+	<hr />
+
+	<div class="md5">
+		<!-- 
+		<p class="bg-success">16位小写:<span class="result"></span></p>
+		<p class="bg-info uppercase">16位大写:<span class="result"></span></p>
+		 -->
+		<p class="bg-warning">32位小写:<span class="result"><%= @thirtyTwo %></span></p>
+		<p class="bg-danger uppercase">32位大写:<span class="result"><%= @thirtyTwo %></span></p>
+	</div>
+
+	<div class="sha1 hide">
+		<p class="bg-success">SHA1小写:<span class="result"><%= @sha1 %></span></p>
+		<p class="bg-info uppercase">SHA1大写:<span class="result"><%= @sha1 %></span></p>
+	</div>
+
+	<div class="sha2 hide">
+		<p class="bg-warning">SHA2小写:<span class="result"><%= @sha2 %></span></p>
+		<p class="bg-danger uppercase">SHA2大写:<span class="result"><%= @sha2 %></span></p>
+	</div>
+</div>

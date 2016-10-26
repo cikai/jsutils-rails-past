@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'main/index'
-  get 'main/md5utils'
+  get 'main/encryption'
 
-  root 'main#md5utils'
+  root 'main#encryption'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

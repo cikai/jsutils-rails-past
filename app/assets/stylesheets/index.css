@@ -1,6 +1,6 @@
 p {
 	padding: 15px;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 #app {
@@ -11,6 +11,19 @@ p {
 	text-transform: uppercase;
 }
 
-.md5-result {
+.result {
 	padding-left: 50px;
+	word-wrap: break-word;
+}
+
+.hide {
+	display: none;
+}
+
+.select-label a {
+	font-size: 1.2em;
+}
+
+.encryption-form {
+	text-align: center;
 }
